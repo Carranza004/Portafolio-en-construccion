@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Krona+One&display=swap');
+
+:root{
+
+
+    --color-text:#FFFF;
+    --color-white: #FFF;
+    --color-gray: #c4c4c4;
+    --color-black: #000;
+    --color-purple: #ff7424;
+    --color-light-purple: #ffd726;
+    --color-light-blue: #006ead;
+
+}
+
+*{
+
+padding: 0;
+margin: 0;
+}
+
+body{
+
+/* tipografias: Allison, krona */
+    box-sizing: border-box;
+    background-image: url(../imagenes/bodyBackground.png);
+    background-size: cover;
+    /* background-color:#000; */
+    color: var(--color-text);
+}
+
+.container{
+    display: flex;
+    color: var(--color-text);
+    justify-content: center;
+    
+
+}
+
+
+
+.about_me{
+
+    font-family: 'Krona one', sans-serif;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--color-text);
+    position: fixed;
+    display: flex;
+    margin: 10px 170px;
+
+    
+
+    /* agregar funcion de linea interactiva, puede ir por text decoration... */
+    /* quiza hacer dos columnas con grid*/
+      
+}
+
+.about{
+
+    
+    margin-top: 50px;
+    background-color: #FFFF;
+}
+.central_title{
+
+    font-family: 'Krona one', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+
+.title_text{
+
+
+    font-size: 3.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* me conviene quitar el header para que me quede como quiero?? */
+}
+
+.phrase{
+
+font-family: 'Allison', sans-serif;
+padding: 3.5%;
+display: flex;
+font-size: 4.5rem;
+justify-content: center;
+color: var(--color-text);
+
+}
+
+#gradient{
+
+    background: linear-gradient(-45deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+
+}
+
+.about_me:after {
+    content: "";
+    position: absolute;
+    background-color: var(--color-white);
+    height: 2px;
+    border-radius: 80px;
+    width: 39%; /* Inicialmente cubre la mitad del texto */
+    left: 0; /* Comienza desde el inicio del texto */
+    bottom: -4px;
+    transition: width 0.3s ease; /* Transición suave solo para el ancho */
+}
+.about_me:hover {
+    color: #ffffff;
+}
+.about_me:hover:after {
+    width: 100%; /* Al hacer hover, la línea se extiende al 100% del texto */
+    /* No es necesario ajustar 'left' ya que está alineado al inicio */
+}
+
+
+
+
+
+
